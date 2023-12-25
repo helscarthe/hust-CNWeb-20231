@@ -1,3 +1,9 @@
+# Calendar project: 
+Công nghệ Web và dịch vụ trực tuyến 2023
+143534 - IT4409 (LT+BT)
+GV: Trịnh Tuấn Đạt
+Nhóm 4
+
 ### Yêu cầu cài đặt sẵn
 
 1. Cài đặt `docker` (tham khảo tại https://docs.docker.com/desktop/install/windows-install/)
