@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: hust-CNWeb20231-calendarApp
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: calendar_db
+    ports:
+      - "5432:5432"
