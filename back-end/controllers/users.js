@@ -46,6 +46,22 @@ const UsersController = {
           .status(StatusCodes.INTERNAL_SERVER_ERROR)
           .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
     }
+  },
+  getUserByName: async (req, res) => {
+    try {
+        const userName = req.param("name");
+        const getUser = await Users.findAll({
+            where: {
+              username: userName,
+            },
+          });
+        res.status(StatusCodes.OK).json(getUser);
+    } catch (err) {
+        console.log(err);
+        return res
+          .status(StatusCodes.INTERNAL_SERVER_ERROR)
+          .json({ error: ReasonPhrases.INTERNAL_SERVER_ERROR });
+    }
   }
 };
 

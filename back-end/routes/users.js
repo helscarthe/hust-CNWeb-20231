@@ -10,4 +10,5 @@ export default function account(app) {
   
     // GET {baseURL}/api/account/:id
     router.get( "/:id", UserController.getUserByID);
+    router.get( "/name/:name", UserController.getUserByName);
   }
