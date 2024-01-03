@@ -14,8 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   SharedEvents.init({
-    eventID: DataTypes.INTEGER,
-    userID: DataTypes.INTEGER
+    eventID: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
+    userID: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    }
   }, {
     sequelize,
     modelName: 'SharedEvents',

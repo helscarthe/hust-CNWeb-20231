@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   RepeatedEventsMonthly.init({
-    eventID: DataTypes.INTEGER,
+    eventID: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
     date: DataTypes.INTEGER,
     endDate: DataTypes.DATE
   }, {

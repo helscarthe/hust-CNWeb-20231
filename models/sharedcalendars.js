@@ -14,8 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   SharedCalendars.init({
-    ownerID: DataTypes.INTEGER,
-    viewerID: DataTypes.INTEGER
+    ownerID:{
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    },
+    viewerID: {
+      type: DataTypes.INTEGER,
+      primaryKey: true
+    }
   }, {
     sequelize,
     modelName: 'SharedCalendars',
